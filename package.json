@@ -12,11 +12,13 @@
     "ajv": "^8.17.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "cros": "^1.1.0",
     "crypto-js": "^4.2.0",
     "dotenv": "^17.2.2",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
