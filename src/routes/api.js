@@ -11,11 +11,23 @@ import cors from "cors";
 const app = express();
 
 // ✅ Enable CORS for all origins (safe for dev; tighten later if needed)
-app.use(cors());
+// app.use(cors());
 
 // Middleware to parse JSON bodies if needed
-app.use(express.json());
+// app.use(express.json());
 
+// Setup CORS
+const corsOptions = {
+  origin: [ "https://json-ui-eosin.vercel.app", "http://localhost:3000" ],
+  methods: ["GET","POST","OPTIONS"],
+  allowedHeaders: ["Content-Type","Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
+// Body parsing
+app.use(express.json());
 
 function parsePayload(req) {
   try {
