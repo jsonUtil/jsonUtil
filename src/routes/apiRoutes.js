@@ -5,7 +5,7 @@ import { generateHTMLForm, generateJSONSchema } from "../services/formGenerator.
 import { validateJSON } from "../services/validator.js";
 import { handleCRUD } from "../services/crudHandler.js";
 
-const router = express.Router();
+const app = express.Router();
 
 function parsePayload(req) {
   try {
@@ -15,7 +15,7 @@ function parsePayload(req) {
   }
 }
 
-router.post("/forms", apiAuth, logRequest, (req, res) => {
+ app.post("/forms", apiAuth, logRequest, (req, res) => {
   const operation = req.headers["x-operation"];
   const responseType = req.headers["x-response-type"];
   const cssFramework = req.headers["x-css-framework"] || "none";
@@ -36,13 +36,13 @@ router.post("/forms", apiAuth, logRequest, (req, res) => {
 });
 
 // Logs endpoint returns array of decrypted JSON strings
-router.get("/logs", apiAuth, (req, res) => {
+ app.get("/logs", apiAuth, (req, res) => {
   const logs = readLogs();
   res.json(logs); // Array of decrypted JSON strings
 });
 
-router.get("/", (req, res) => {
+ app.get("/", (req, res) => {
   res.json({ status: "ok", service: "JSON EHR Utils API" });
 });
 
-export default router;
+export default app;
