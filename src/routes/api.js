@@ -5,6 +5,8 @@ import { generateHTMLForm, generateJSONSchema } from "../services/formGenerator.
 import { validateJSON } from "../services/validator.js";
 import { handleCRUD } from "../services/crudHandler.js";
 import bodyParser from "body-parser";
+import serverless from "serverless-http";
+import cors from "cors";
 
 const app = express();
 
@@ -53,4 +55,6 @@ function parsePayload(req) {
   res.json({ status: "ok", service: "JSON EHR Utils API" });
 });
 
+// ✅ Handle preflight automatically
+export const handler = serverless(app);
 export default app;
