@@ -83,7 +83,7 @@
         const cssFramework = document.getElementById("cssFramework").value;
         loadFramework(cssFramework);
 
-        const res = await fetch("https://json-util-7r6jckcgr-jsonutils-projects.vercel.app//v1/forms", {
+        const res = await fetch("https://json-util-three.vercel.app/forms", {
           method: "POST",
           headers: {
             "Authorization": "Bearer my-secret-api-key",
@@ -117,7 +117,7 @@
       try {
         const payload = collectFormData();
 
-        const res = await fetch("https://json-util-7r6jckcgr-jsonutils-projects.vercel.app//v1/forms", {
+        const res = await fetch("https://json-util-three.vercel.app/forms", {
           method: "POST",
           headers: {
             "Authorization": "Bearer my-secret-api-key",
