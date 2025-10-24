@@ -6,7 +6,7 @@
 **/venv
 
 # Log Files 
-**/log**
+**/logs/**
 **/logs
 
 # ignore google drive

@@ -591,7 +591,6 @@ SOFTWARE.
 
 ## Acknowledgments
 
-- Built with support from the National Institute of Technology Delhi
 - Inspired by OpenEHR, HL7 FHIR, and the open-source healthcare community
 - Special thanks to all contributors and early adopters
 
