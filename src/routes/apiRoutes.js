@@ -4,8 +4,12 @@ import { logRequest, readLogs } from "../middleware/logger.js";
 import { generateHTMLForm, generateJSONSchema } from "../services/formGenerator.js";
 import { validateJSON } from "../services/validator.js";
 import { handleCRUD } from "../services/crudHandler.js";
+import bodyParser from "body-parser";
 
 const app = express.Router();
+// ✅ Enable CORS for all origins (safe for dev; tighten later if needed)
+app.use(cors());
+app.use(bodyParser.json());
 
 function parsePayload(req) {
   try {
