@@ -5,6 +5,9 @@
 **/.env
 **/venv
 
+# Zips
+**.zip
+
 # Log Files 
 **/logs/**
 **/logs
