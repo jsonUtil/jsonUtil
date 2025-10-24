@@ -1,36 +1,48 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# To ignore all node_modules folders
+**/node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# To ignore all .env files in any directory or subdirectory 
+**/.env
+**/venv
 
-# testing
-/coverage
+# Log Files 
+**/log**
+**/logs
 
-# next.js
-/.next/
-/out/
+# ignore google drive
+**/.tmp**
 
-# production
-/build
+# Ignore node_modules directory in m_table
+m_table/node_modules/
 
-# misc
-.DS_Store
-*.pem
+# # Ignore TPC-H reference data
+m_table/ak_code/tpch.orders-10mb_total_embed.json
+m_table/TPC-H V3.0.1/ref_data
+# m_table/TPC-H V3.0.1/dbgen/lineitem.tbl
+# m_table/TPC-H V3.0.1/dbgen/*.tbl
+# **.tbl**
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Ignore orbda directory and related files
+orbda
+.orbda
+/orbda
 
-# local env files
-.env*.local
-.env
+# Ignore part0 file
+part0
 
-# vercel
-.vercel
+# Ignore files and directories in sus-openehr-builder
+sus-openehr-builder/aih*
+sus-openehr-builder/ehr*
+sus-openehr-builder/patientIds/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+#sus-openehr-builder/
+#sus-openehr-builder/ehr/*
+#sus-openehr-builder/aih_dir/aih_n_aih.txt
+
+# QBDHN
+QBDNH/tpch.tpch_c1_v1.json
+QBDNH/tpch.tpch_c2_v1.json
+
+
+# Macosx
+__MACOSX
